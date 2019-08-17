@@ -3,7 +3,7 @@
 exports[`response to window width changes 1`] = `
 <DocumentFragment>
   <p>
-    500
+    lg
   </p>
 </DocumentFragment>
 `;
@@ -11,7 +11,31 @@ exports[`response to window width changes 1`] = `
 exports[`response to window width changes 2`] = `
 <DocumentFragment>
   <p>
-    1000
+    xs
+  </p>
+</DocumentFragment>
+`;
+
+exports[`response to window width changes 3`] = `
+<DocumentFragment>
+  <p>
+    sm
+  </p>
+</DocumentFragment>
+`;
+
+exports[`response to window width changes 4`] = `
+<DocumentFragment>
+  <p>
+    md
+  </p>
+</DocumentFragment>
+`;
+
+exports[`response to window width changes 5`] = `
+<DocumentFragment>
+  <p>
+    xl
   </p>
 </DocumentFragment>
 `;

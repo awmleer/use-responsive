@@ -5,27 +5,33 @@ import {useResponsive} from '../index'
 import {act} from 'react-dom/test-utils'
 
 test('response to window width changes', function () {
-  act(() => {
-    //@ts-ignore
-    global.innerWidth = 500
-    //@ts-ignore
-    global.dispatchEvent(new Event('resize'))
-  })
+  function changeWidth(width: number) {
+    act(() => {
+      //@ts-ignore
+      global.innerWidth = width
+      //@ts-ignore
+      global.dispatchEvent(new Event('resize'))
+    })
+  }
+  changeWidth(1024)
+  
   function App() {
-    const width = useResponsive()
+    const breakpoint = useResponsive()
     return (
-      <p>{width}</p>
+      <p>{breakpoint}</p>
     )
   }
   const renderer = testing.render(
     <App/>
   )
+  
   expect(renderer.asFragment()).toMatchSnapshot()
-  act(() => {
-    //@ts-ignore
-    global.innerWidth = 1000
-    //@ts-ignore
-    global.dispatchEvent(new Event('resize'))
-  })
+  changeWidth(300)
+  expect(renderer.asFragment()).toMatchSnapshot()
+  changeWidth(700)
+  expect(renderer.asFragment()).toMatchSnapshot()
+  changeWidth(800)
+  expect(renderer.asFragment()).toMatchSnapshot()
+  changeWidth(1200)
   expect(renderer.asFragment()).toMatchSnapshot()
 })
