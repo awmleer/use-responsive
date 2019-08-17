@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`response to window width changes 1`] = `
+<DocumentFragment>
+  <p>
+    500
+  </p>
+</DocumentFragment>
+`;
+
+exports[`response to window width changes 2`] = `
+<DocumentFragment>
+  <p>
+    1000
+  </p>
+</DocumentFragment>
+`;

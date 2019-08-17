@@ -7,7 +7,8 @@
     "module": "commonjs",
     "jsx": "react",
     "lib": ["es6", "dom"],
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "downlevelIteration": true
   },
   "include": [
     "./src/**/*"
