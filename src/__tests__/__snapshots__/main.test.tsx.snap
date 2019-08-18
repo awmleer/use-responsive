@@ -3,7 +3,19 @@
 exports[`response to window width changes 1`] = `
 <DocumentFragment>
   <p>
-    lg
+    xs: true
+  </p>
+  <p>
+    sm: true
+  </p>
+  <p>
+    md: true
+  </p>
+  <p>
+    lg: true
+  </p>
+  <p>
+    xl: false
   </p>
 </DocumentFragment>
 `;
@@ -11,7 +23,19 @@ exports[`response to window width changes 1`] = `
 exports[`response to window width changes 2`] = `
 <DocumentFragment>
   <p>
-    xs
+    xs: true
+  </p>
+  <p>
+    sm: false
+  </p>
+  <p>
+    md: false
+  </p>
+  <p>
+    lg: false
+  </p>
+  <p>
+    xl: false
   </p>
 </DocumentFragment>
 `;
@@ -19,7 +43,19 @@ exports[`response to window width changes 2`] = `
 exports[`response to window width changes 3`] = `
 <DocumentFragment>
   <p>
-    sm
+    xs: true
+  </p>
+  <p>
+    sm: true
+  </p>
+  <p>
+    md: false
+  </p>
+  <p>
+    lg: false
+  </p>
+  <p>
+    xl: false
   </p>
 </DocumentFragment>
 `;
@@ -27,7 +63,19 @@ exports[`response to window width changes 3`] = `
 exports[`response to window width changes 4`] = `
 <DocumentFragment>
   <p>
-    md
+    xs: true
+  </p>
+  <p>
+    sm: true
+  </p>
+  <p>
+    md: true
+  </p>
+  <p>
+    lg: false
+  </p>
+  <p>
+    xl: false
   </p>
 </DocumentFragment>
 `;
@@ -35,7 +83,39 @@ exports[`response to window width changes 4`] = `
 exports[`response to window width changes 5`] = `
 <DocumentFragment>
   <p>
-    xl
+    xs: true
+  </p>
+  <p>
+    sm: true
+  </p>
+  <p>
+    md: true
+  </p>
+  <p>
+    lg: true
+  </p>
+  <p>
+    xl: false
+  </p>
+</DocumentFragment>
+`;
+
+exports[`response to window width changes 6`] = `
+<DocumentFragment>
+  <p>
+    xs: true
+  </p>
+  <p>
+    sm: true
+  </p>
+  <p>
+    md: true
+  </p>
+  <p>
+    lg: true
+  </p>
+  <p>
+    xl: true
   </p>
 </DocumentFragment>
 `;

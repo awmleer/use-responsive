@@ -1,5 +1,4 @@
 import * as testing from '@testing-library/react'
-import {FC, useState} from 'react'
 import * as React from 'react'
 import {useResponsive} from '../index'
 import {act} from 'react-dom/test-utils'
@@ -16,9 +15,15 @@ test('response to window width changes', function () {
   changeWidth(1024)
   
   function App() {
-    const breakpoint = useResponsive()
+    const info = useResponsive()
     return (
-      <p>{breakpoint}</p>
+      <>
+        <p>xs: {info.xs.toString()}</p>
+        <p>sm: {info.sm.toString()}</p>
+        <p>md: {info.md.toString()}</p>
+        <p>lg: {info.lg.toString()}</p>
+        <p>xl: {info.xl.toString()}</p>
+      </>
     )
   }
   const renderer = testing.render(
@@ -31,6 +36,8 @@ test('response to window width changes', function () {
   changeWidth(700)
   expect(renderer.asFragment()).toMatchSnapshot()
   changeWidth(800)
+  expect(renderer.asFragment()).toMatchSnapshot()
+  changeWidth(1000)
   expect(renderer.asFragment()).toMatchSnapshot()
   changeWidth(1200)
   expect(renderer.asFragment()).toMatchSnapshot()
