@@ -21,6 +21,7 @@ let responsiveConfig: ResponsiveConfig = {
 
 export function configResponsive(config: ResponsiveConfig) {
   responsiveConfig = config
+  calculate()
 }
 
 let info: ResponsiveInfo = {}
@@ -29,7 +30,7 @@ function calculate() {
   const width = window.innerWidth
   const newInfo = {} as ResponsiveInfo
   let shouldUpdate = false
-  for (const key in responsiveConfig) {
+  for (const key of Object.keys(responsiveConfig)) {
     newInfo[key] = width >= responsiveConfig[key]
     if (newInfo[key] !== info[key]) {
       shouldUpdate = true
@@ -52,7 +53,7 @@ window.addEventListener('resize', () => {
 
 export function useResponsive() {
   const [state, setState] = useState<ResponsiveInfo>(info)
-  
+
   useEffect(() => {
     const subscriber = () => {
       setState(info)
@@ -62,6 +63,6 @@ export function useResponsive() {
       subscribers.delete(subscriber)
     }
   }, [])
-  
+
   return state
 }
