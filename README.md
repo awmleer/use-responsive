@@ -1,5 +1,11 @@
 # useResponsive
 
+---
+
+**This hook has been migrated to `ahooks`: https://ahooks.js.org/hooks/dom/use-responsive**
+
+---
+
 React hook for responsive design.
 
 ## API
